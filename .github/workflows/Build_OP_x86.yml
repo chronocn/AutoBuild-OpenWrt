@@ -96,5 +96,5 @@ jobs:
     - name : Upload artifact
       uses: actions/upload-artifact@master
       with:
-        name: OpenWrt
+        name: OpenWrt-x86-32
         path: openwrt/bin
