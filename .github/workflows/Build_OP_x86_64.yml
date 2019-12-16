@@ -3,7 +3,7 @@
 # Lisence: MIT
 # Author: eSirPlayground
 # Youtube Channel: https://goo.gl/fvkdwm 
-# Manually run 201912162320
+# Manually run 201912162337
 #=================================================
 
 name: Build_x86_64
@@ -67,7 +67,6 @@ jobs:
     - name: Update & Install feeds
       working-directory: ./openwrt
       run: |
-        make clean
         echo "src-git lienol https://github.com/Lienol/openwrt-package " >> ~/lede/feeds.conf.default
         ./scripts/feeds update -a
         ./scripts/feeds install -a
