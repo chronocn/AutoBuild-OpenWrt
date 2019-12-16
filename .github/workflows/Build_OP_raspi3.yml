@@ -3,6 +3,7 @@
 # Lisence: MIT
 # Author: eSirPlayground
 # Youtube Channel: https://goo.gl/fvkdwm 
+# Manually run on
 #=================================================
 
 name: Build_raspi3
@@ -87,8 +88,8 @@ jobs:
     - name: Build firmware
       working-directory: ./openwrt
       run: |
-        echo -e "$(nproc) thread build."
-        make -j$(nproc) V=s
+        echo -e "1 thread build."
+        make -j1 V=s
     - name : Upload artifact
       uses: actions/upload-artifact@master
       with:
