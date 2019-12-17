@@ -12,12 +12,12 @@ on:
   release:
     types: [published]
 
-  push:
-    branches: 
-      - master
+  #push:
+  #  branches: 
+  #    - master
 
-  #schedule:
-  #  - cron: 0 20 * * 6
+  schedule:
+    - cron: 0 20 1,11,21 * *
   
   #watch:
   #  types: [started]
@@ -71,7 +71,6 @@ jobs:
         ./scripts/feeds update -a
         ./scripts/feeds install -a
         ./scripts/feeds install -a
-        mkdir dl
 
     - name: Configuration Customization - Build_x86_64
       env:
