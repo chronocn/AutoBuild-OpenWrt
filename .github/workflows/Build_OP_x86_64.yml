@@ -12,9 +12,9 @@ on:
   release:
     types: [published]
 
-  #push:
-  #  branches: 
-  #    - master
+  push:
+    branches: 
+      - master
 
   #schedule:
   #  - cron: 0 20 * * 6
@@ -80,6 +80,10 @@ jobs:
         chmod +x ./customize.sh && ./customize.sh
         cd openwrt && make defconfig
         
+    - name: Download self package
+      working-directory: ./openwrt/dl
+         wget https://github.com/chenshuo890/AutoBuild-OpenWrt/blob/master/dl/linux_amd64_client.tar.gz
+         
     - name: Download package
       working-directory: ./openwrt
       run: |
@@ -91,10 +95,10 @@ jobs:
       working-directory: ./openwrt
       run: |
         echo -e "1 thread build."
-        make -j1 V=s
+        make -j1
 
     - name : Upload artifact
       uses: actions/upload-artifact@master
       with:
-        name: OpenWrt-x64
+        name: Lean-OpenWrt-x64
         path: openwrt/bin
