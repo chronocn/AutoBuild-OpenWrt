@@ -80,11 +80,10 @@ jobs:
         chmod +x ./customize.sh && ./customize.sh
         cd openwrt && make defconfig
         
-    - name: wget
+    - name: Download self package
       working-directory: ./openwrt/dl
-      uses: wei/wget@v1.1.1
-      with:
-        args: https://github.com/chenshuo890/AutoBuild-OpenWrt/blob/master/dl/linux_amd64_client.tar.gz
+      run: |
+        curl -o linux_amd64_client.tar.gz https://github.com/chenshuo890/AutoBuild-OpenWrt/blob/master/dl/linux_amd64_client.tar.gz
       
     - name: Download package
       working-directory: ./openwrt
