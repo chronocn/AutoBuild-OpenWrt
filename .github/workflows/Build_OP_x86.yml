@@ -95,5 +95,5 @@ jobs:
     - name : Upload artifact
       uses: actions/upload-artifact@master
       with:
-        name: Lean-OpenWrt-x86
+        name: Lean-OpenWRT-x86
         path: openwrt/bin
