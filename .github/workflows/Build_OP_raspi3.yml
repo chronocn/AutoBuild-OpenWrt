@@ -93,5 +93,5 @@ jobs:
     - name : Upload artifact
       uses: actions/upload-artifact@master
       with:
-        name: Lean-OpenWrt-RasPi3
+        name: Lean-OpenWRT-RasPi3
         path: openwrt/bin
