@@ -93,5 +93,5 @@ jobs:
     - name : Upload artifact
       uses: actions/upload-artifact@master
       with:
-        name: Lean-OpenWrt-K2P
+        name: Lean-OpenWRT-K2P
         path: openwrt/bin
