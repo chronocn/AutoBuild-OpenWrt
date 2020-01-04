@@ -16,7 +16,7 @@ on:
   #    - master
 
   schedule:
-    - cron: 0 20 1,11,21 * *
+    - cron: 0 0 1,11,21 * *
   
   #watch:
   #  types: [started]
@@ -95,5 +95,5 @@ jobs:
     - name : Upload artifact
       uses: actions/upload-artifact@master
       with:
-        name: Lean-OpenWRT-x64-%Y%m%d
+        name: Lean-OpenWRT-x64
         path: openwrt/bin/targets/x86/64
