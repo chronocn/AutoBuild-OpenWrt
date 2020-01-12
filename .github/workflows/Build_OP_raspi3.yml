@@ -104,7 +104,7 @@ jobs:
       working-directory: ./openwrt
       run: |
         echo -e "1 thread build."
-        make -j2
+        make -j1
         
     - name : Upload artifact
       uses: actions/upload-artifact@master
