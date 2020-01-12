@@ -85,7 +85,6 @@ jobs:
         rm -rf package/lean/luci-app-pptp-server
         rm -rf package/lean/luci-app-v2ray-server
         ./scripts/feeds install -a
-        ./scripts/feeds install -a
 
     - name: Configuration Customization - Build_x86_64
       env:
