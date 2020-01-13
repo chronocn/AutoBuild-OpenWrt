@@ -11,9 +11,9 @@ on:
   release:
     types: [published]
 
-  #push:
-  #  branches: 
-  #    - master
+  push:
+    branches: 
+      - master
 
   schedule:
     - cron: 0 0 3 * *
@@ -104,7 +104,7 @@ jobs:
       working-directory: ./openwrt
       run: |
         echo -e "1 thread build."
-        make -j1
+        make -j2
         
     - name : Upload artifact
       uses: actions/upload-artifact@master
