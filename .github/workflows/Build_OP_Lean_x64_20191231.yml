@@ -11,9 +11,9 @@ on:
   release:
     types: [published]
 
-#  push:
-#    branches: 
-#      - master
+  push:
+    branches: 
+      - master
 
   schedule:
     - cron: 0 0 1,11,21 * *
@@ -85,6 +85,7 @@ jobs:
         rm -rf package/lean/luci-app-pptp-server
         rm -rf package/lean/luci-app-v2ray-server
         ./scripts/feeds install -a
+        
     - name: Configuration Customization - Build_x86_64
       env:
         CONFIG_FILE: 'x86_64.config'
@@ -107,5 +108,5 @@ jobs:
     - name : Upload artifact
       uses: actions/upload-artifact@master
       with:
-        name: Lean-OpenWRT-x64
+        name: Lean-OpenWRT-x64-20191231
         path: openwrt/bin/targets/x86/64
