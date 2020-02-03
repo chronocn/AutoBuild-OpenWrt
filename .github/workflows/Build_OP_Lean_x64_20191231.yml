@@ -5,7 +5,7 @@
 # Youtube Channel: https://goo.gl/fvkdwm 
 #=================================================
 
-name: Build_x86_64
+name: Build_Lean_x64_20191231
 
 on: 
   release:
@@ -15,8 +15,8 @@ on:
     branches: 
       - master
 
-  schedule:
-    - cron: 0 0 1,11,21 * *
+#  schedule:
+#    - cron: 0 0 1,11,21 * *
   
   #watch:
   #  types: [started]
@@ -65,8 +65,6 @@ jobs:
     - name: Update & Install feeds
       working-directory: ./openwrt
       run: |
-        git reset --hard origin/master
-        ./scripts/feeds clean
         echo "src-git lienol https://github.com/Lienol/openwrt-package " >> feeds.conf.default
         chmod +x ./openclash.sh && ./openclash.sh
         ./scripts/feeds update -a
@@ -86,7 +84,7 @@ jobs:
         rm -rf package/lean/luci-app-v2ray-server
         ./scripts/feeds install -a
         
-    - name: Configuration Customization - Build_x86_64
+    - name: Configuration Customization - Build_Lean_x64_20191231
       env:
         CONFIG_FILE: 'x86_64.config'
       run: |
