@@ -16,7 +16,7 @@ on:
 #      - master
 
   schedule:
-    - cron: 0 6 1,11,21 * *
+    - cron: 0 6 6 * *
   
 #  watch:
 #    types: [started]
@@ -60,7 +60,7 @@ jobs:
     - name: Clone source code
       env: 
         REPO_URL: https://github.com/Lienol/openwrt
-        REPO_BRANCH: master
+        REPO_BRANCH: my-19.07-full
       run: git clone $REPO_URL
 
     - name: Update & Install feeds
