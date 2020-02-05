@@ -111,4 +111,4 @@ jobs:
       uses: actions/upload-artifact@master
       with:
         name: Lean-OpenWRT-x86
-        path: openwrt/bin/targets/targets/x86/core2
+        path: openwrt/bin/targets/x86/core2/
