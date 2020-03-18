@@ -63,11 +63,27 @@ jobs:
         REPO_BRANCH: master
       run: git clone --depth 1 $REPO_URL -b $REPO_BRANCH openwrt
 
-    - name: Update & Install feeds
+    - name: Clone source code
+      env: 
+        REPO_URL: https://github.com/coolsnowwolf/lede
+        REPO_BRANCH: master
+      run: git clone --depth 1 $REPO_URL -b $REPO_BRANCH openwrt
+
+    - name: Clean
       working-directory: ./openwrt
       run: |
         git reset --hard origin/master
         ./scripts/feeds clean
+        
+    - name: Add packages
+      working-directory: ./openwrt/package
+      run: |
+        git clone https://github.com/destan19/OpenAppFilter.git
+        git clone https://github.com/vernesong/OpenClash.git -b master luci-app-openclash
+        
+    - name: Update & Install feeds
+      working-directory: ./openwrt
+      run: |
         echo "src-git lienol https://github.com/Lienol/openwrt-package " >> feeds.conf.default
         ./scripts/feeds update -a
         rm -rf feeds/lienol/lienol/v2ray
