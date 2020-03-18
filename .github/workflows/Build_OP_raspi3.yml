@@ -11,9 +11,9 @@ on:
   release:
     types: [published]
 
-  push:
-    branches: 
-      - master
+  #push:
+  #  branches: 
+  #    - master
 
   schedule:
     - cron: 0 0 2,7,12,17,22,27 * *
@@ -121,4 +121,4 @@ jobs:
       uses: actions/upload-artifact@master
       with:
         name: Lean-OpenWRT-RasPi3
-        path: openwrt/bin/targets/brcm2708/bcm2710
+        path: openwrt/bin/targets
