@@ -57,6 +57,12 @@ jobs:
         sudo -E apt-get -y autoremove --purge
         sudo -E apt-get clean
         
+    - name: Clone source code
+      env: 
+        REPO_URL: https://github.com/coolsnowwolf/lede
+        REPO_BRANCH: master
+      run: git clone --depth 1 $REPO_URL -b $REPO_BRANCH openwrt
+      
     - name: Clean
       working-directory: ./openwrt
       run: |
