@@ -60,7 +60,7 @@ jobs:
     - name: Clone source code
       env: 
         REPO_URL: https://github.com/chenshuo890/lean-lede
-        REPO_BRANCH: 20191231
+        REPO_BRANCH: 20200319
       run: git clone --depth 1 $REPO_URL -b $REPO_BRANCH openwrt
 
     - name: Clean
