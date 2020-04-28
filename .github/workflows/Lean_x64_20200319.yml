@@ -5,7 +5,7 @@
 # Youtube Channel: https://goo.gl/fvkdwm 
 #=================================================
 
-name: Build_Lean_x64_20191231
+name: Build_Lean_x64_20200329
 
 on: 
   release:
@@ -18,12 +18,12 @@ on:
 #  schedule:
 #    - cron: 0 0 1,11,21 * *
   
-  #watch:
-  #  types: [started]
+#  watch:
+#    types: [started]
 
 jobs:
   build:
-    runs-on: ubuntu-latest
+    runs-on: ubuntu-18.04
 
     steps:
     - name: Checkout
@@ -53,20 +53,20 @@ jobs:
           mysql* \
           php*
         sudo -E apt-get update
-        sudo -E apt-get -y install build-essential asciidoc binutils bzip2 curl wget gawk gettext git libncurses5-dev patch unzip zlib1g-dev lib32gcc1 libc6-dev-i386 subversion flex node-uglify gcc-multilib p7zip p7zip-full msmtp libssl-dev texinfo libglib2.0-dev xmlto qemu-utils upx-ucl libelf-dev autoconf automake libtool autopoint device-tree-compiler libuv-dev
+        sudo -E apt-get -y install build-essential asciidoc binutils bzip2 gawk gettext git libncurses5-dev libz-dev patch python3 unzip zlib1g-dev lib32gcc1 libc6-dev-i386 subversion flex uglifyjs gcc-multilib g++-multilib p7zip p7zip-full msmtp libssl-dev texinfo libglib2.0-dev xmlto qemu-utils upx libelf-dev autoconf automake libtool autopoint device-tree-compiler antlr3 gperf
         sudo -E apt-get -y autoremove --purge
         sudo -E apt-get clean
         
     - name: Clone source code
       env: 
         REPO_URL: https://github.com/chenshuo890/lean-lede
-        REPO_BRANCH: 20200319
+        REPO_BRANCH: 20200329
       run: git clone --depth 1 $REPO_URL -b $REPO_BRANCH openwrt
 
     - name: Clean
       working-directory: ./openwrt
       run: |
-        git reset --hard origin/20191231
+        git reset --hard origin/20200329
         ./scripts/feeds clean
 
     - name: Add packages
@@ -78,25 +78,11 @@ jobs:
     - name: Update & Install feeds
       working-directory: ./openwrt
       run: |
-        echo "src-git lienol https://github.com/Lienol/openwrt-package " >> feeds.conf.default
+        echo "src-git lienol https://github.com/chenshuo890/lienol-openwrt-package " >> feeds.conf.default
         ./scripts/feeds update -a
-        rm -rf feeds/lienol/lienol/v2ray
-        rm -rf feeds/lienol/lienol/openssl1.1
-        rm -rf feeds/lienol/lienol/trojan
-        rm -rf feeds/lienol/lienol/ipt2socks
-        rm -rf feeds/lienol/lienol/shadowsocks-libev-new
-        rm -rf feeds/lienol/lienol/shadowsocksr-libev
-        rm -rf feeds/lienol/lienol/pdnsd-alt
-        rm -rf feeds/lienol/package/verysync
-        rm -rf feeds/lienol/lienol/luci-app-verysync
-        rm -rf package/lean/kcptun
-        rm -rf package/lean/luci-app-kodexplorer
-        rm -rf package/lean/luci-app-pppoe-relay
-        rm -rf package/lean/luci-app-pptp-server
-        rm -rf package/lean/luci-app-v2ray-server
         ./scripts/feeds install -a
         
-    - name: Configuration Customization - Build_Lean_x64_20191231
+    - name: Configuration Customization - Build_Lean_x64
       env:
         CONFIG_FILE: 'x86_64.config'
       run: |
@@ -120,5 +106,5 @@ jobs:
     - name : Upload artifact
       uses: actions/upload-artifact@master
       with:
-        name: Lean-OpenWRT-x64-20191231
+        name: Lean-OpenWRT-x64-20200329
         path: openwrt/bin/targets/x86/64
