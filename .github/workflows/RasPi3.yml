@@ -79,7 +79,7 @@ jobs:
       working-directory: ./openwrt
       run: |
         echo "src-git helloworld https://github.com/fw876/helloworld " >> feeds.conf.default
-        echo "src-git lienol https://github.com/chenshuo890/lienol-openwrt-package " >> feeds.conf.default
+        echo "src-git lienol https://github.com/Lienol/openwrt-package " >> feeds.conf.default
         ./scripts/feeds update -a
         ./scripts/feeds install -a
         
