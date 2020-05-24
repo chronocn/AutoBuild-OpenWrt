@@ -101,7 +101,7 @@ jobs:
     - name: Build firmware
       working-directory: ./openwrt
       run: |
-        echo -e "1 thread build."
+        echo -e "Building."
         make -j$(($(nproc) + 1))
 
     - name : Upload artifact
