@@ -73,7 +73,7 @@ jobs:
       working-directory: ./openwrt/package
       run: |
         git clone https://github.com/destan19/OpenAppFilter.git
-        git clone https://github.com/vernesong/OpenClash.git -b master luci-app-openclash
+        git clone https://github.com/chenshuo890/OpenClash.git -b master luci-app-openclash
 
     - name: Update & Install feeds
       working-directory: ./openwrt
