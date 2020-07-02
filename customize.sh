@@ -11,4 +11,4 @@
 #sed -i 's/4.19/4.14/g' openwrt/target/linux/x86/Makefile
 #sed -i 's/4.9/4.14/g' openwrt/target/linux/x86/Makefile
 #3. Modify opkg sources
-cp files openwrt/
+cp -r files openwrt/
