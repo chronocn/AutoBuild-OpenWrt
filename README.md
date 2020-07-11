@@ -1,7 +1,7 @@
 # AutoBuild-OpenWrt
 
 Build OpenWrt firware [Lean's OpenWrt](https://github.com/coolsnowwolf/lede) using GitHub Actions  
-Hereby thank P3TERX for his amazing job: https://github.com/P3TERX/Actions-OpenWrt/
+Hereby thank [P3TERX](https://github.com/P3TERX/Actions-OpenWrt/) for his amazing job.
 For the details please visit [eSir Y2B Channel (in Chinese) | 视频教程](https://youtu.be/9YO7nxNry-4)
 
 ## Usage
