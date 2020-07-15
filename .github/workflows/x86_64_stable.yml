@@ -18,8 +18,8 @@ on:
   schedule:
     - cron: 0 12 */15 * *
   
-  #watch:
-  #  types: [started]
+  watch:
+    types: [started]
 
 jobs:
   build:
