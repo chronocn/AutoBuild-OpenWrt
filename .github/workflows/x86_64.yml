@@ -60,18 +60,18 @@ jobs:
     - name: Add packages
       working-directory: ./openwrt/package
       run: |
-        git clone https://github.com/destan19/OpenAppFilter.git
+        git clone https://github.com/chenshuo890/OpenAppFilter.git
         git clone https://github.com/chenshuo890/OpenClash.git -b master luci-app-openclash
         git clone https://github.com/chenshuo890/eqos.git
-
+        
     - name: Update & Install feeds
       working-directory: ./openwrt
       run: |
-        echo "src-git helloworld https://github.com/fw876/helloworld " >> feeds.conf.default
-        echo "src-git lienol https://github.com/Lienol/openwrt-package " >> feeds.conf.default
+        echo "src-git helloworld https://github.com/chenshuo890/helloworld " >> feeds.conf.default
+        echo "src-git lienol https://github.com/chenshuo890/lienol-openwrt-package " >> feeds.conf.default
         ./scripts/feeds update -a
         ./scripts/feeds install -a
-
+        
     - name: Configuration Customization - Build_x86_64
       env:
         CONFIG_FILE: 'x86_64.config'
