@@ -54,7 +54,6 @@ jobs:
     - name: Clean
       working-directory: ./openwrt
       run: |
-        git reset --hard origin/master
         ./scripts/feeds clean
 
     - name: Add packages
