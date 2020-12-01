@@ -54,7 +54,7 @@ jobs:
     - name: Clean
       working-directory: ./openwrt
       run: |
-        git reset --hard origin/master
+        git reset --hard
         ./scripts/feeds clean
         
     - name: Update & Install feeds
