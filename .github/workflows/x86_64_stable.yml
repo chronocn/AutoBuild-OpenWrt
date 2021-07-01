@@ -44,7 +44,6 @@ jobs:
         sudo -E apt-get -y purge azure-cli ghc* zulu* hhvm llvm* firefox google* dotnet* powershell openjdk* mysql* php* android*
         sudo -E apt-get -y autoremove --purge
         sudo -E apt-get clean
-        d=$(date +%Y%m%d)
         
     - name: Clone source code
       env: 
@@ -95,5 +94,5 @@ jobs:
     - name : Upload artifact
       uses: actions/upload-artifact@master
       with:
-        name: Lean-OpenWRT-x64-stable-$d
+        name: Lean-OpenWRT-x64-stable
         path: openwrt/bin/targets/x86/64
