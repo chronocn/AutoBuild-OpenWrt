@@ -10,6 +10,6 @@
 #2. Modify kernel version
 #sed -i 's/5.4/4.19/g' openwrt/target/linux/x86/Makefile
 #sed -i 's/4.9/4.14/g' openwrt/target/linux/x86/Makefile
-#sed -i 's/5.10/5.4/g' openwrt/target/linux/x86/Makefile
+sed -i 's/5.10/5.4/g' openwrt/target/linux/x86/Makefile
 #3. Modify opkg sources
 #cp -r files openwrt/
