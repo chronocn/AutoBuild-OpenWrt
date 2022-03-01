@@ -59,7 +59,6 @@ jobs:
     - name: Add packages
       working-directory: ./openwrt/package
       run: |
-        git clone https://github.com/destan19/OpenAppFilter.git
         git clone https://github.com/chenshuo890/eqos.git
         
     - name: Update & Install feeds
