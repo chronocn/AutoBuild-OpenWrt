@@ -49,7 +49,7 @@ jobs:
     - name: Clone source code
       env: 
         REPO_URL: https://github.com/immortalwrt/immortalwrt
-        REPO_BRANCH: master
+        REPO_BRANCH: openwrt-21.02
       run: git clone --depth 1 --single-branch $REPO_URL -b $REPO_BRANCH openwrt
 
     - name: Clean
