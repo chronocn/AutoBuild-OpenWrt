@@ -35,6 +35,10 @@ CONFIG_PACKAGE_iptables-mod-fullconenat=y
 CONFIG_PACKAGE_iptables-mod-ipopt=y
 CONFIG_PACKAGE_iptables-mod-ipsec=y
 CONFIG_PACKAGE_ipv6helper=y
+CONFIG_PACKAGE_kmod-fast-classifier=y
+CONFIG_PACKAGE_kmod-ipt-offload=y
+CONFIG_PACKAGE_kmod-nf-flow=y
+CONFIG_PACKAGE_kmod-shortcut-fe=y
 CONFIG_PACKAGE_kmod-usb-net-rtl8152=y
 CONFIG_PACKAGE_lsblk=y
 # CONFIG_PACKAGE_luci-app-accesscontrol is not set
@@ -103,8 +107,8 @@ CONFIG_PACKAGE_luci-app-ssr-plus_INCLUDE_Xray=y
 # CONFIG_PACKAGE_luci-app-syncdial is not set
 # CONFIG_PACKAGE_luci-app-ttyd is not set
 CONFIG_PACKAGE_luci-app-turboacc=y
-CONFIG_PACKAGE_TURBOACC_INCLUDE_OFFLOADING=y
-CONFIG_PACKAGE_TURBOACC_INCLUDE_SHORTCUT_FE=y
+CONFIG_PACKAGE_TURBOACC_INCLUDE_FAST_CLASSIFIER=y
+CONFIG_PACKAGE_TURBOACC_INCLUDE_FLOW_OFFLOADING=y
 CONFIG_PACKAGE_TURBOACC_INCLUDE_BBR_CCA=y
 # CONFIG_PACKAGE_luci-app-udpxy is not set
 # CONFIG_PACKAGE_luci-app-unbound is not set
