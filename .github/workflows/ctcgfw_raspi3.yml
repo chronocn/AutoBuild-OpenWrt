@@ -5,7 +5,7 @@
 # Youtube Channel: https://goo.gl/fvkdwm 
 #=================================================
 
-name: Build_ctcgfw_x64
+name: Build_ctcgfw_raspi3
 
 on: 
   release:
