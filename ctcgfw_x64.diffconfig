@@ -146,3 +146,8 @@ CONFIG_TARGET_ROOTFS_PARTSIZE=400
 CONFIG_VMDK_IMAGES=y
 # CONFIG_UnblockNeteaseMusic_Go is not set
 # CONFIG_UnblockNeteaseMusic_NodeJS is not set
+CONFIG_PACKAGE_libcap=y
+CONFIG_PACKAGE_libcap-bin=y
+CONFIG_PACKAGE_ruby=y
+CONFIG_PACKAGE_ruby-yaml=y
+CONFIG_PACKAGE_kmod-inet-diag=y
