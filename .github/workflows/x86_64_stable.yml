@@ -96,7 +96,7 @@ jobs:
       working-directory: ./openwrt
       run: |
         echo -e "Building."
-        make -j$(($(nproc) + 1))
+        make -j$(($(nproc) + 1)) V=s
         
     - name : Upload artifact
       uses: actions/upload-artifact@master
