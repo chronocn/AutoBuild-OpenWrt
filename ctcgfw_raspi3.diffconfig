@@ -1,13 +1,11 @@
 CONFIG_TARGET_bcm27xx=y
 CONFIG_TARGET_bcm27xx_bcm2710=y
 CONFIG_TARGET_bcm27xx_bcm2710_DEVICE_rpi-3=y
-CONFIG_BUSYBOX_CUSTOM=y
-CONFIG_BUSYBOX_CONFIG_BASH_IS_ASH=y
-# CONFIG_BUSYBOX_CONFIG_BASH_IS_NONE is not set
 CONFIG_DEFAULT_SETTINGS_OPTIMIZE_FOR_CHINESE=y
 CONFIG_LUCI_LANG_zh_Hans=y
 # CONFIG_PACKAGE_automount is not set
 # CONFIG_PACKAGE_autosamba is not set
+CONFIG_PACKAGE_bash=y
 CONFIG_PACKAGE_cfdisk=y
 CONFIG_PACKAGE_ddns-scripts-cloudflare=y
 CONFIG_PACKAGE_ddns-scripts-noip=y
@@ -60,7 +58,6 @@ CONFIG_PACKAGE_luci-app-ipsec-server=y
 CONFIG_PACKAGE_luci-app-nlbwmon=y
 CONFIG_PACKAGE_luci-app-nps=y
 CONFIG_PACKAGE_luci-app-ocserv=y
-# CONFIG_PACKAGE_luci-app-openclash is not set
 CONFIG_PACKAGE_luci-app-openclash=y
 CONFIG_PACKAGE_luci-app-openvpn=y
 CONFIG_PACKAGE_luci-app-openvpn-server=y
