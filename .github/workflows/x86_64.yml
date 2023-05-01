@@ -67,6 +67,7 @@ jobs:
       working-directory: ./openwrt/package
       run: |
         git clone https://github.com/chenshuo890/eqos.git
+        git clone https://github.com/vernesong/OpenClash.git
         
     - name: Update & Install feeds
       working-directory: ./openwrt
