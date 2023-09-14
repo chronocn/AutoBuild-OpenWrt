@@ -72,8 +72,8 @@ jobs:
       working-directory: ./openwrt
       run: |
         echo "src-git lienol https://github.com/Lienol/openwrt-package " >> feeds.conf.default
-        echo "src-git passwall_packages https://github.com/xiaorouji/openwrt-passwall;packages " >> feeds.conf.default
-        echo "src-git passwall_luci https://github.com/xiaorouji/openwrt-passwall;luci " >> feeds.conf.default
+        echo "src-git passwall_packages https://github.com/xiaorouji/openwrt-passwall-packages.git;main " >> feeds.conf.default
+        echo "src-git passwall https://github.com/xiaorouji/openwrt-passwall.git;main " >> feeds.conf.default
         ./scripts/feeds update -a
         ./scripts/feeds install -a
         
