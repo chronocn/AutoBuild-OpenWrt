@@ -8,13 +8,6 @@ CONFIG_ISO_IMAGES=y
 # CONFIG_PACKAGE_automount is not set
 # CONFIG_PACKAGE_autosamba is not set
 CONFIG_PACKAGE_bash=y
-CONFIG_PACKAGE_gzip=y
-CONFIG_PACKAGE_iftop=y
-CONFIG_PACKAGE_ip6tables=y
-CONFIG_PACKAGE_ip6tables-extra=y
-CONFIG_PACKAGE_ip6tables-mod-nat=y
-CONFIG_PACKAGE_iperf=y
-CONFIG_PACKAGE_iperf3=y
 CONFIG_PACKAGE_ipv6helper=y
 CONFIG_PACKAGE_lsblk=y
 # CONFIG_PACKAGE_luci-app-accesscontrol is not set
