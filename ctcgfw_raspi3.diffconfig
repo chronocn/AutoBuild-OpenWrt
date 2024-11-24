@@ -107,7 +107,9 @@ CONFIG_PACKAGE_luci-app-shairplay=m
 CONFIG_PACKAGE_luci-app-smartdns=m
 CONFIG_PACKAGE_luci-app-snmpd=m
 CONFIG_PACKAGE_luci-app-socat=m
+CONFIG_PACKAGE_luci-app-speederv2=m
 CONFIG_PACKAGE_luci-app-sqm=y
+CONFIG_PACKAGE_luci-app-sshtunnel=m
 # CONFIG_PACKAGE_luci-app-ssr-plus is not set
 # CONFIG_PACKAGE_luci-app-ssr-plus_INCLUDE_NONE_V2RAY is not set
 # CONFIG_PACKAGE_luci-app-ssr-plus_INCLUDE_V2ray is not set
@@ -142,12 +144,14 @@ CONFIG_PACKAGE_luci-app-turboacc=y
 # CONFIG_PACKAGE_TURBOACC_INCLUDE_FAST_CLASSIFIER is not set
 CONFIG_PACKAGE_TURBOACC_INCLUDE_SHORTCUT_FE_CM=y
 CONFIG_PACKAGE_TURBOACC_INCLUDE_BBR_CCA=y
+CONFIG_PACKAGE_luci-app-ua2f=m
 CONFIG_PACKAGE_luci-app-uhttpd=y
 # CONFIG_PACKAGE_luci-app-unbound is not set
 CONFIG_PACKAGE_luci-app-upnp=y
 CONFIG_PACKAGE_luci-app-usb-printer=m
 CONFIG_PACKAGE_luci-app-uugamebooster=m
 CONFIG_PACKAGE_luci-app-v2ray-server=m
+CONFIG_PACKAGE_luci-app-v2raya=m
 CONFIG_PACKAGE_luci-app-vlmcsd=y
 # CONFIG_PACKAGE_luci-app-vsftpd is not set
 # CONFIG_PACKAGE_luci-app-watchcat is not set
